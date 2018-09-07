@@ -1,5 +1,14 @@
 def heapsort(arr):
- pass 
+  sort = []
+  newHeap = Heap() # init heap
+
+  for i in arr: # create and insert into new heap
+    newHeap.insert(i)
+  
+  while len(newHeap.storage) > 0: # conditional if heap is > 0 delete largest value
+    sort = [newHeap.delete()] + sort
+    
+  return sort
  
 
 class Heap:
